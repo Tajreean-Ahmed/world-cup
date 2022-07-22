@@ -179,7 +179,6 @@ a {
         display: none;
     }
 
-    footer {}
 }
 
 /* Tablet devices */
@@ -239,5 +238,12 @@ a {
 
     .view-btn {
         display: none;
+    }
+
+    .nav-link {
+        display: block;
+        margin-bottom: 30px;
+        color: gray;
+
     }
 }
