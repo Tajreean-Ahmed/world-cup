@@ -3,7 +3,6 @@
 /* common style and utilities*/
 body {
     font-family: 'Poppins', sans-serif;
-
 }
 
 /* Main Section */
@@ -11,14 +10,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
-.container {
+/* Top-Section */
+.top-banner {
     background-color: black;
     border-radius: 30px;
 
-    margin: 50px 120px;
+    /* margin: 50px 120px; */
 }
 
 .top-part {
@@ -28,13 +27,14 @@ main {
     background-color: black;
     border-radius: 30px;
     padding: 30px;
-    width: 100%;
+    /* width: 100%; */
 
 
 }
 
 .top-section {
     margin-right: 10px;
+    padding-left: 20px;
 }
 
 .heading,
@@ -51,7 +51,12 @@ main {
     background: #DD0000;
     border-radius: 5px;
     color: white;
+    transition: 1s ease-in-out;
 
+}
+
+.header-button:hover {
+    background-color: #b88585;
 }
 
 /* Blog-Section */
@@ -100,8 +105,23 @@ button {
     line-height: 24px;
 }
 
+/* Button for tablet view */
+.tab-btn {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.view-btn {
+    padding: 12px 29px;
+    gap: 10px;
+    background: #DD0000;
+    border-radius: 5px;
+    color: white;
+}
+
 /* Footer Css */
 footer {
+
     margin: 0;
     text-align: center;
     background-color: black;
@@ -112,6 +132,12 @@ footer {
 
 hr {
     border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
 }
 
 /* Second Webpage */
@@ -138,4 +164,80 @@ hr {
 
 .item-info-2nd {
     text-align: center;
+}
+
+
+/* Media Query */
+
+/* Dekstop View */
+@media screen and (min-width:993px) {
+    .top-banner {
+        margin: 50px 120px;
+    }
+
+    .view-btn {
+        display: none;
+    }
+
+    footer {}
+}
+
+/* Tablet devices */
+@media screen and (min-width:688px) and (max-width:992px) {
+
+    .side-item {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        text-align: center;
+    }
+
+    .items-1 {
+        display: block;
+    }
+
+    .items-2 {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        margin: 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* Mobile device */
+@media screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .top-part {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .side-item {
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .items-1 {
+        display: block;
+    }
+
+    .items-2 {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        margin: 0;
+    }
+
+    .view-btn {
+        display: none;
+    }
 }
